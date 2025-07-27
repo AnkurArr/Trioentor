@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trioentor - We Build, Teach & Entertain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        .parallax {
+            transform: translateY(var(--scroll-y, 0));
+        }
+        
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+        
+        .hero-text {
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white smooth-scroll">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center animate-pulse-slow">
+                        <span class="text-white font-bold text-xl">T</span>
+                    </div>
+                    <span class="text-xl font-bold">Trioentor</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-purple-400 transition-colors">Home</a>
+                    <a href="#ecosystem" class="hover:text-purple-400 transition-colors">Ecosystem</a>
+                    <a href="#team" class="hover:text-purple-400 transition-colors">Team</a>
+                    <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+            <div class="absolute top-40 right-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-float">
+                <div class="w-32 h-32 mx-auto mb-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center glow-effect">
+                    <span class="text-white font-bold text-6xl">T</span>
+                </div>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 hero-text">TRIOENTOR</h1>
+            <p class="text-2xl md:text-3xl mb-8 text-gray-200">We Build, Teach & Entertain – The Power of 3 Minds</p>
+            <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 glow-effect">
+                Explore Our Ecosystem
+            </button>
+        </div>
+    </section>
+
+    <!-- Trioentor Ecosystem -->
+    <section id="ecosystem" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 hero-text">Trioentor Ecosystem</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Study Platform -->
+                <div class="glass-effect rounded-2xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Trioentor Study</h3>
+                    <p class="text-gray-300 mb-6">eLearning platform with comprehensive online courses and study resources for all skill levels.</p>
+                    <button class="bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                        Visit Now
+                    </button>
+                </div>
+
+                <!-- Coding Channel -->
+                <div class="glass-effect rounded-2xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-yellow-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Trioentor Coding</h3>
+                    <p class="text-gray-300 mb-6">YouTube-based coding education channel with tutorials, projects, and programming insights.</p>
+                    <button class="bg-gradient-to-r from-red-500 to-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                        Watch Now
+                    </button>
+                </div>
+
+                <!-- Art Platform -->
+                <div class="glass-effect rounded-2xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Trioentor Art</h3>
+                    <p class="text-gray-300 mb-6">YouTube channel and art class platform for artists to learn and showcase their creativity.</p>
+                    <button class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                        Create Now
+                    </button>
+                </div>
+
+                <!-- AI Assistant -->
+                <div class="glass-effect rounded-2xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Trioentor AI Assistant</h3>
+                    <p class="text-gray-300 mb-6">Interactive AI chatbot like Jarvis to help with tasks, questions, and creative solutions.</p>
+                    <button class="bg-gradient-to-r from-cyan-400 to-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                        Try Now
+                    </button>
+                </div>
+
+                <!-- SaaS Tools -->
+                <div class="glass-effect rounded-2xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Trioentor SaaS</h3>
+                    <p class="text-gray-300 mb-6">Bundle of free tools including QR generator, YouTube tools, PDF tools, and more utilities.</p>
+                    <button class="bg-gradient-to-r from-orange-400 to-red-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                        Use Tools
+                    </button>
+                </div>
+
+                <!-- Store -->
+                <div class="glass-effect rounded-2xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-store text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Trioentor Store</h3>
+                    <p class="text-gray-300 mb-6">Online shop to purchase digital art, educational books, merchandise, and exclusive content.</p>
+                    <button class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest YouTube Videos -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 hero-text">Latest Content</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center">
+                        <i class="fas fa-play text-4xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Advanced React Hooks Tutorial</h3>
+                        <p class="text-gray-400 mb-4">Learn advanced React hooks patterns and best practices</p>
+                        <button class="text-red-400 hover:text-red-300 font-semibold">Watch Video →</button>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                        <i class="fas fa-play text-4xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Digital Art Masterclass</h3>
+                        <p class="text-gray-400 mb-4">Create stunning digital artwork from scratch</p>
+                        <button class="text-purple-400 hover:text-purple-300 font-semibold">Watch Video →</button>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
+                        <i class="fas fa-play text-4xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">AI & Machine Learning Basics</h3>
+                        <p class="text-gray-400 mb-4">Introduction to AI concepts and practical applications</p>
+                        <button class="text-green-400 hover:text-green-300 font-semibold">Watch Video →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section id="team" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 hero-text">Meet the Team</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center card-hover">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Alex Johnson</h3>
+                    <p class="text-purple-400 mb-4">Lead Developer & Co-Founder</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="text-center card-hover">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Sarah Chen</h3>
+                    <p class="text-pink-400 mb-4">Creative Director & Co-Founder</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                
+                <div class="text-center card-hover">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Mike Rodriguez</h3>
+                    <p class="text-green-400 mb-4">Education Lead & Co-Founder</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 hero-text">Our Tech Stack</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="text-center tech-icon">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-orange-500 rounded-xl flex items-center justify-center">
+                        <i class="fab fa-html5 text-3xl text-white"></i>
+                    </div>
+                    <p class="text-sm">HTML5</p>
+                </div>
+                
+                <div class="text-center tech-icon">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-yellow-500 rounded-xl flex items-center justify-center">
+                        <i class="fab fa-js text-3xl text-white"></i>
+                    </div>
+                    <p class="text-sm">JavaScript</p>
+                </div>
+                
+                <div class="text-center tech-icon">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-blue-500 rounded-xl flex items-center justify-center">
+                        <i class="fab fa-react text-3xl text-white"></i>
+                    </div>
+                    <p class="text-sm">React</p>
+                </div>
+                
+                <div class="text-center tech-icon">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-yellow-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-fire text-3xl text-white"></i>
+                    </div>
+                    <p class="text-sm">Firebase</p>
+                </div>
+                
+                <div class="text-center tech-icon">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-purple-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-credit-card text-3xl text-white"></i>
+                    </div>
+                    <p class="text-sm">Stripe</p>
+                </div>
+                
+                <div class="text-center tech-icon">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-green-500 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-brain text-3xl text-white"></i>
+                    </div>
+                    <p class="text-sm">GPT AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 hero-text">Partner With Us</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">Let's Create Something Amazing</h3>
+                        <p class="text-gray-300 mb-8">Ready to join forces? Whether you're looking to collaborate, learn, or build something incredible together, we'd love to hear from you.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <span>hello@trioentor.com</span>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                        </div>
+                        
+                        <div cl
